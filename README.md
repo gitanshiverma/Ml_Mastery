@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # ML Mastery Hub
 
 Here is a detailed prompt you can use to generate the website you described. It includes the 3D wallpaper, the full ML course based on the playlist you provided, an AI time scheduler, and a reward system.
@@ -180,3 +181,6 @@ cd <repository-name>
 npm i
 npm run dev
 ```
+=======
+# Ml_Mastery
+>>>>>>> c9dece119c24af7ae367e9980febd976219561a7
