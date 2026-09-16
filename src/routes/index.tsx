@@ -7,17 +7,17 @@ import { Button, Card, Progress, Stat } from "@/components/ui-kit";
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "ML Mastery — Learn Machine Learning in 38 Lessons" },
+      { title: "ML Mastery — 100 Days of Machine Learning (CampusX)" },
       {
         name: "description",
         content:
-          "A 3D, dark-neon learning hub for machine learning: 38 structured video lessons, an adaptive study planner, a session timer and badge rewards.",
+          "A 3D, dark-neon learning hub for CampusX's 100 Days of Machine Learning: 134 structured video lectures, comprehensive notes, adaptive study planner, session timer and rewards.",
       },
-      { property: "og:title", content: "ML Mastery — Learn Machine Learning in 38 Lessons" },
+      { property: "og:title", content: "ML Mastery — 100 Days of Machine Learning (CampusX)" },
       {
         property: "og:description",
         content:
-          "Structured ML curriculum, adaptive study planner, study timer and rewards in one place.",
+          "Structured 134-lesson ML curriculum by CampusX, adaptive study planner, study timer and rewards in one place.",
       },
     ],
   }),
@@ -37,7 +37,7 @@ function Home() {
     <div className="mx-auto max-w-5xl px-4 py-14">
       <section className="text-center">
         <p className="text-xs font-semibold uppercase tracking-[0.3em] text-primary">
-          38 lessons · 10 modules · one habit
+          134 lessons · 14 modules · 100 days of ml
         </p>
         <h1 className="mt-4 font-display text-5xl font-bold leading-tight sm:text-6xl">
           Master <span className="text-gradient">Machine Learning</span>

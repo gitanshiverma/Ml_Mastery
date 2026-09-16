@@ -9,7 +9,7 @@ A modern, interactive 3D learning platform designed to help developers and data 
 ## ✨ Features
 
 - 🎨 **Interactive 3D Canvas**: Built with Three.js & `@react-three/fiber`, featuring a dynamic neural network background with theme-aware color palettes.
-- 📚 **38-Lesson Machine Learning Curriculum**: Comprehensive module-based course covering regression, classification, decision trees, ensembles, clustering, and anomaly detection.
+- 📚 **134-Lesson Machine Learning Curriculum (CampusX)**: Comprehensive 14-module course covering Python data tools, EDA, feature engineering, missing data/outliers, PCA, linear/polynomial regressions, regularized models, logistic regression, Naive Bayes, SVM, decision trees, ensembles (Bagging, Random Forest, AdaBoost, Gradient Boosting, XGBoost), clustering (K-Means, DBSCAN), and hyperparameter optimization with Optuna.
 - 📅 **Adaptive Study Planner**: Intelligent scheduling algorithm that distributes unfinished lessons based on your daily available hours and study days.
 - ⏱️ **Time Tracker & Gamified Rewards**: Integrated study timer with live progress tracking, streaks, points, and unlockable badges (like _ML Warrior_ for 8-hour focus sessions).
 - 🛠️ **Project Showcase & Submissions**: Dedicated project workspace with curated ML project ideas and user submission tracking.

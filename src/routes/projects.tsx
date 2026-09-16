@@ -24,37 +24,60 @@ export const Route = createFileRoute("/projects")({
 
 const IDEAS = [
   {
-    topic: "Linear Regression",
-    idea: "Predict house prices from the Boston or Bengaluru housing data.",
+    topic: "End-to-End ML Deployment",
+    idea: "Build and deploy a complete ML toy application using Scikit-Learn, Pickle, and Streamlit.",
   },
   {
-    topic: "Ridge & Lasso",
-    idea: "Compare regularised models on a high-dimensional gene expression dataset.",
+    topic: "Data Scraping & EDA",
+    idea: "Scrape tabular data from web pages/APIs and create a deep exploratory analysis on IPL or Movie datasets.",
   },
   {
-    topic: "Logistic Regression",
-    idea: "Build a loan-default classifier with a clean evaluation report.",
-  },
-  { topic: "Naive Bayes", idea: "Classify SMS messages as spam or ham using TF-IDF features." },
-  { topic: "KNN", idea: "Recommend movies by nearest-neighbour similarity on ratings." },
-  { topic: "SVM", idea: "Classify handwritten digits and visualise the decision boundaries." },
-  {
-    topic: "Decision Trees",
-    idea: "Predict customer churn and explain each split to a non-technical reader.",
-  },
-  { topic: "Random Forest", idea: "Rank feature importance for a credit-risk dataset." },
-  {
-    topic: "Boosting",
-    idea: "Beat your random forest baseline with AdaBoost and gradient boosting.",
-  },
-  { topic: "Clustering", idea: "Segment retail customers with K-Means and profile each cluster." },
-  {
-    topic: "Anomaly Detection",
-    idea: "Flag fraudulent card transactions with Isolation Forest and LOF.",
+    topic: "Feature Engineering Pipeline",
+    idea: "Build an end-to-end ColumnTransformer & Pipeline with One-Hot encoding, imputation, and power transforms.",
   },
   {
-    topic: "Automated EDA",
-    idea: "Publish a one-click profiling report for any CSV a user uploads.",
+    topic: "Linear, Ridge & Lasso Regression",
+    idea: "Predict house prices and compare OLS, Ridge (L2), and Lasso (L1) with automated alpha tuning.",
+  },
+  {
+    topic: "Logistic Regression & ROC-AUC",
+    idea: "Build a credit card fraud detection classifier with threshold tuning and ROC-AUC curve evaluation.",
+  },
+  {
+    topic: "Naive Bayes Classifier",
+    idea: "Classify SMS messages and spam emails using TF-IDF vectorization and Multinomial Naive Bayes.",
+  },
+  {
+    topic: "KNN Recommendation Engine",
+    idea: "Recommend movies or songs based on feature similarity and Minkowski distance metrics.",
+  },
+  {
+    topic: "Support Vector Machines",
+    idea: "Classify handwritten digits or non-linear blobs using SVM with RBF and Polynomial kernels.",
+  },
+  {
+    topic: "Decision Trees & dtreeviz",
+    idea: "Predict employee attrition or churn and visualize tree decision boundaries with dtreeviz.",
+  },
+  {
+    topic: "Random Forest & OOB Score",
+    idea: "Build a loan approval predictor and calculate feature importances alongside out-of-bag (OOB) validation.",
+  },
+  {
+    topic: "AdaBoost & Gradient Boosting",
+    idea: "Train custom AdaBoost and Gradient Boosting regressors and compare residual convergence.",
+  },
+  {
+    topic: "XGBoost & Ensembles",
+    idea: "Compete on Kaggle tabular benchmarks using XGBoost, Voting Classifiers, and Stacking meta-learners.",
+  },
+  {
+    topic: "K-Means & DBSCAN Clustering",
+    idea: "Segment e-commerce customers into behavioral personas using K-Means (Elbow method) and DBSCAN.",
+  },
+  {
+    topic: "Optuna Hyperparameter Tuning",
+    idea: "Optimize XGBoost and Random Forest hyperparameters using Optuna's Bayesian TPE sampler and pruning.",
   },
 ];
 

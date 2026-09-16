@@ -92,12 +92,30 @@ function LessonPage() {
       </div>
 
       <Card className="mt-6">
-        <h2 className="font-display text-lg font-semibold">What you'll learn</h2>
+        <h2 className="font-display text-lg font-semibold">Overview</h2>
         <p className="mt-2 text-muted-foreground">{lesson.summary}</p>
-        <p className="mt-3 text-xs text-muted-foreground">
-          Estimated watch time: {lesson.minutes} minutes
-        </p>
-        <div className="mt-5 flex flex-wrap items-center gap-3">
+        <div className="mt-4 flex flex-wrap items-center gap-4 text-xs text-muted-foreground">
+          <span>⏱️ Estimated watch time: {lesson.minutes} minutes</span>
+          <span>•</span>
+          <a
+            href={`https://www.youtube.com/watch?v=${lesson.videoId}&list=PLKnIA16_Rmvbr7zKYQuBfsVkjoLcJgxHH&index=${lesson.index}`}
+            target="_blank"
+            rel="noreferrer"
+            className="text-primary hover:underline"
+          >
+            Watch on YouTube ↗
+          </a>
+          <span>•</span>
+          <a
+            href="https://github.com/campusx-official/100-days-of-machine-learning"
+            target="_blank"
+            rel="noreferrer"
+            className="text-primary hover:underline"
+          >
+            CampusX Code Repository ↗
+          </a>
+        </div>
+        <div className="mt-6 flex flex-wrap items-center gap-3">
           <Button onClick={toggle} variant={complete ? "outline" : "primary"}>
             {complete ? "✓ Completed — undo" : "Mark as complete (+20 pts)"}
           </Button>
@@ -121,6 +139,20 @@ function LessonPage() {
           ) : null}
         </div>
       </Card>
+
+      {lesson.notes && lesson.notes.length > 0 ? (
+        <Card className="mt-6">
+          <h2 className="font-display text-lg font-semibold">Key Takeaways & Notes</h2>
+          <ul className="mt-3 space-y-2.5 text-sm text-muted-foreground">
+            {lesson.notes.map((note, idx) => (
+              <li key={idx} className="flex items-start gap-2.5">
+                <span className="mt-1 h-1.5 w-1.5 shrink-0 rounded-full bg-primary" />
+                <span className="leading-relaxed">{note}</span>
+              </li>
+            ))}
+          </ul>
+        </Card>
+      ) : null}
 
       <div className="mt-6">
         <div className="mb-2 flex justify-between text-sm text-muted-foreground">

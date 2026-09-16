@@ -7,16 +7,16 @@ import { Card, Progress, inputClass } from "@/components/ui-kit";
 export const Route = createFileRoute("/course")({
   head: () => ({
     meta: [
-      { title: "Machine Learning Full Course — 38 Lessons | ML Mastery" },
+      { title: "Machine Learning Full Course — 100 Days of ML | CampusX" },
       {
         name: "description",
         content:
-          "A structured 38-lesson machine learning curriculum in Hindi: regression, classification, SVM, trees, ensembles and clustering.",
+          "A structured 134-lesson machine learning curriculum from CampusX: foundations, EDA, feature engineering, regression, classification, SVM, trees, ensembles, clustering and Optuna.",
       },
-      { property: "og:title", content: "Machine Learning Full Course — 38 Lessons" },
+      { property: "og:title", content: "Machine Learning Full Course — 100 Days of ML | CampusX" },
       {
         property: "og:description",
-        content: "Follow the complete ML curriculum lesson by lesson and track your progress.",
+        content: "Follow CampusX's complete 100 Days of ML curriculum lesson by lesson and track your progress.",
       },
     ],
   }),
@@ -47,7 +47,7 @@ function CoursePage() {
         The <span className="text-gradient">Machine Learning</span> Course
       </h1>
       <p className="mt-2 max-w-2xl text-muted-foreground">
-        38 lessons across 10 modules, from your first straight line to anomaly detection.
+        134 video lectures across 14 modules, from Python & data basics to XGBoost, clustering and hyperparameter optimization.
       </p>
 
       <Card className="mt-6">

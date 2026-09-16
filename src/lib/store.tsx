@@ -104,7 +104,7 @@ export const BADGES: { id: string; label: string; detail: string }[] = [
   { id: "ml-warrior", label: "ML Warrior", detail: "Study 8+ hours in a day" },
   { id: "week-streak", label: "Week Streak", detail: "Study 7 days in a row" },
   { id: "halfway", label: "Halfway There", detail: "Finish half the course" },
-  { id: "graduate", label: "ML Graduate", detail: "Finish all 38 lessons" },
+  { id: "graduate", label: "ML Graduate", detail: "Finish all 134 lessons" },
 ];
 
 export function streakDays(sessions: Record<string, number>) {
