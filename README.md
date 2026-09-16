@@ -61,7 +61,7 @@ Run the Vite dev server with hot module replacement:
 npm run dev
 ```
 
-Open [http://localhost:8080/](http://localhost:8080/) (or the designated port) in your browser.
+Open [http://localhost:8080/](http://localhost:8080/
 
 ### Type Check & Code Quality
 
@@ -96,7 +96,7 @@ npm run preview
 
 ## 🌐 Deployment
 
-## deployment  link: https://ml-mastery-xi.vercel.app/
+## deployment  link:https://ml-mastery-9edu.vercel.app/
 
 The project uses **Nitro** server engine, enabling easy deployment to multiple providers:
 
