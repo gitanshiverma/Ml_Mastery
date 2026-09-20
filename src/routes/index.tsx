@@ -1,7 +1,6 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { LESSONS } from "@/lib/course";
 import { buildPlan } from "@/lib/planner";
-<<<<<<< HEAD
 import {
   BADGES,
   formatHoursAndMins,
@@ -12,9 +11,6 @@ import {
   totalMinutes,
   useStore,
 } from "@/lib/store";
-=======
-import { BADGES, streakDays, todayKey, totalMinutes, useStore } from "@/lib/store";
->>>>>>> 88d3f5c648715706e0bc2b78dc2e61cbfd9402e4
 import { Button, Card, Progress, Stat } from "@/components/ui-kit";
 
 export const Route = createFileRoute("/")({
@@ -45,7 +41,6 @@ function Home() {
   const today = state.sessions[todayKey()] ?? 0;
   const plan = state.plan ? buildPlan(state.plan, state.completed) : [];
   const todayPlan = plan.find((d) => d.date === todayKey()) ?? plan[0];
-<<<<<<< HEAD
   const dailyGoalMinutes = getEffectiveDailyGoalMinutes(state);
 
   // Generate the last 14 days for the dashboard activity strip
@@ -66,8 +61,6 @@ function Home() {
       isToday: key === todayKey(),
     };
   });
-=======
->>>>>>> 88d3f5c648715706e0bc2b78dc2e61cbfd9402e4
 
   return (
     <div className="mx-auto max-w-5xl px-4 py-14">
@@ -81,19 +74,13 @@ function Home() {
           one focused day at a time
         </h1>
         <p className="mx-auto mt-4 max-w-xl text-muted-foreground">
-<<<<<<< HEAD
           A full ML curriculum, a planner that reshapes itself around your schedule, a study timer,
           glowing calendar, and badges that make the hours count.
-=======
-          A full ML curriculum, a planner that reshapes itself around your schedule, a study timer
-          and badges that make the hours count.
->>>>>>> 88d3f5c648715706e0bc2b78dc2e61cbfd9402e4
         </p>
         <div className="mt-8 flex flex-wrap justify-center gap-3">
           <Link to="/lesson/$id" params={{ id: nextLesson.id }}>
             <Button>{done ? "Continue learning" : "Start lesson 1"}</Button>
           </Link>
-<<<<<<< HEAD
           <Link to="/tracker">
             <Button variant="outline">📅 Open Study Calendar</Button>
           </Link>
@@ -101,10 +88,6 @@ function Home() {
             <Button variant="ghost" className="border border-border">
               Build my study plan
             </Button>
-=======
-          <Link to="/planner">
-            <Button variant="outline">Build my study plan</Button>
->>>>>>> 88d3f5c648715706e0bc2b78dc2e61cbfd9402e4
           </Link>
         </div>
       </section>
@@ -122,20 +105,15 @@ function Home() {
 
       <div className="mt-4 grid gap-3 sm:grid-cols-4">
         <Stat label="Lessons done" value={`${done}/${LESSONS.length}`} />
-<<<<<<< HEAD
         <Stat
           label="Today"
           value={formatStudyHours(today)}
           hint={`Daily target: ${formatStudyHours(dailyGoalMinutes)}`}
         />
-=======
-        <Stat label="Today" value={`${(today / 60).toFixed(1)} h`} hint="8 h earns ML Warrior" />
->>>>>>> 88d3f5c648715706e0bc2b78dc2e61cbfd9402e4
         <Stat label="Streak" value={`${streakDays(state.sessions)}d`} />
         <Stat label="Total hours" value={(totalMinutes(state.sessions) / 60).toFixed(1)} />
       </div>
 
-<<<<<<< HEAD
       {/* 14-Day Study Activity & Calendar Strip */}
       <Card className="mt-4">
         <div className="flex items-center justify-between">
@@ -180,8 +158,6 @@ function Home() {
         </div>
       </Card>
 
-=======
->>>>>>> 88d3f5c648715706e0bc2b78dc2e61cbfd9402e4
       <div className="mt-4 grid gap-4 md:grid-cols-2">
         <Card>
           <h2 className="font-display text-lg font-semibold">Today's plan</h2>
@@ -228,18 +204,11 @@ function Home() {
             ))}
           </div>
           <Link to="/tracker" className="mt-4 inline-block text-sm text-primary hover:underline">
-<<<<<<< HEAD
             Open the study calendar & timer →
-=======
-            Open the study timer →
->>>>>>> 88d3f5c648715706e0bc2b78dc2e61cbfd9402e4
           </Link>
         </Card>
       </div>
     </div>
   );
 }
-<<<<<<< HEAD
 
-=======
->>>>>>> 88d3f5c648715706e0bc2b78dc2e61cbfd9402e4

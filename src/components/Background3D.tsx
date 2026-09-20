@@ -4,7 +4,6 @@ import * as THREE from "three";
 import { useStore } from "@/lib/store";
 
 const PALETTES = {
-<<<<<<< HEAD
   dark: {
     primary: "#00f0ff",
     accent: "#ff007f",
@@ -234,30 +233,13 @@ function KineticField({
 
   const { positions, linePositions } = useMemo(() => {
     const count = 75;
-=======
-  dark: { a: "#22e3c0", b: "#b25cff", fog: "#0a0f1c" },
-  light: { a: "#0f9c8b", b: "#7a4bd0", fog: "#eef2f8" },
-};
-
-function Network({ colorA, colorB }: { colorA: string; colorB: string }) {
-  const group = useRef<THREE.Group>(null);
-
-  const { positions, linePositions } = useMemo(() => {
-    const count = 90;
->>>>>>> 88d3f5c648715706e0bc2b78dc2e61cbfd9402e4
     const pts: THREE.Vector3[] = [];
     for (let i = 0; i < count; i++) {
       pts.push(
         new THREE.Vector3(
-<<<<<<< HEAD
           (Math.random() - 0.5) * 18,
           (Math.random() - 0.5) * 11,
           (Math.random() - 0.5) * 7 - 1,
-=======
-          (Math.random() - 0.5) * 16,
-          (Math.random() - 0.5) * 9,
-          (Math.random() - 0.5) * 8,
->>>>>>> 88d3f5c648715706e0bc2b78dc2e61cbfd9402e4
         ),
       );
     }
@@ -273,11 +255,7 @@ function Network({ colorA, colorB }: { colorA: string; colorB: string }) {
       for (let j = i + 1; j < count; j++) {
         const a = pts[i]!;
         const b = pts[j]!;
-<<<<<<< HEAD
         if (a.distanceTo(b) < 2.5) {
-=======
-        if (a.distanceTo(b) < 2.6) {
->>>>>>> 88d3f5c648715706e0bc2b78dc2e61cbfd9402e4
           lines.push(a.x, a.y, a.z, b.x, b.y, b.z);
         }
       }
@@ -285,20 +263,10 @@ function Network({ colorA, colorB }: { colorA: string; colorB: string }) {
     return { positions: pos, linePositions: new Float32Array(lines) };
   }, []);
 
-<<<<<<< HEAD
   useFrame((_, delta) => {
     const dt = Math.min(delta, 0.05);
     if (!group.current) return;
     group.current.rotation.y += dt * 0.03;
-=======
-  useFrame((state, delta) => {
-    const dt = Math.min(delta, 0.05);
-    if (!group.current) return;
-    group.current.rotation.y += dt * 0.05;
-    const { x, y } = state.pointer;
-    group.current.rotation.x += (y * 0.15 - group.current.rotation.x) * dt * 1.5;
-    group.current.position.x += (x * 0.6 - group.current.position.x) * dt * 1.5;
->>>>>>> 88d3f5c648715706e0bc2b78dc2e61cbfd9402e4
   });
 
   return (
@@ -308,17 +276,10 @@ function Network({ colorA, colorB }: { colorA: string; colorB: string }) {
           <bufferAttribute attach="attributes-position" args={[positions, 3]} />
         </bufferGeometry>
         <pointsMaterial
-<<<<<<< HEAD
           size={0.09}
           color={colorA}
           transparent
           opacity={0.8}
-=======
-          size={0.11}
-          color={colorA}
-          transparent
-          opacity={0.9}
->>>>>>> 88d3f5c648715706e0bc2b78dc2e61cbfd9402e4
           sizeAttenuation
           depthWrite={false}
         />
@@ -327,21 +288,13 @@ function Network({ colorA, colorB }: { colorA: string; colorB: string }) {
         <bufferGeometry>
           <bufferAttribute attach="attributes-position" args={[linePositions, 3]} />
         </bufferGeometry>
-<<<<<<< HEAD
         <lineBasicMaterial color={colorB} transparent opacity={0.16} depthWrite={false} />
-=======
-        <lineBasicMaterial color={colorB} transparent opacity={0.22} depthWrite={false} />
->>>>>>> 88d3f5c648715706e0bc2b78dc2e61cbfd9402e4
       </lineSegments>
     </group>
   );
 }
 
-<<<<<<< HEAD
 function FloatingPolyhedron({
-=======
-function FloatingShape({
->>>>>>> 88d3f5c648715706e0bc2b78dc2e61cbfd9402e4
   position,
   color,
   speed,
@@ -357,7 +310,6 @@ function FloatingShape({
     const dt = Math.min(delta, 0.05);
     if (!ref.current) return;
     ref.current.rotation.x += dt * speed;
-<<<<<<< HEAD
     ref.current.rotation.y += dt * speed * 0.8;
     ref.current.position.y = position[1] + Math.sin(state.clock.elapsedTime * speed * 0.9) * 0.35;
   });
@@ -365,22 +317,12 @@ function FloatingShape({
     <mesh ref={ref} position={position} scale={scale}>
       <octahedronGeometry args={[1, 0]} />
       <meshBasicMaterial color={color} wireframe transparent opacity={0.25} />
-=======
-    ref.current.rotation.y += dt * speed * 0.7;
-    ref.current.position.y = position[1] + Math.sin(state.clock.elapsedTime * speed * 0.8) * 0.4;
-  });
-  return (
-    <mesh ref={ref} position={position} scale={scale}>
-      <icosahedronGeometry args={[1, 0]} />
-      <meshBasicMaterial color={color} wireframe transparent opacity={0.35} />
->>>>>>> 88d3f5c648715706e0bc2b78dc2e61cbfd9402e4
     </mesh>
   );
 }
 
 export default function Background3D() {
   const { state } = useStore();
-<<<<<<< HEAD
   const palette = PALETTES[state.theme] ?? PALETTES.dark;
 
   return (
@@ -434,25 +376,6 @@ export default function Background3D() {
 
       {/* Backdrop tint layer ensuring high content contrast */}
       <div className="pointer-events-none absolute inset-0 bg-background/50 backdrop-blur-[1px]" />
-=======
-  const palette = PALETTES[state.theme];
-
-  return (
-    <div className="fixed inset-0 -z-10" aria-hidden>
-      <Canvas
-        camera={{ position: [0, 0, 11], fov: 60 }}
-        dpr={[1, 1.6]}
-        gl={{ antialias: true, powerPreference: "high-performance" }}
-      >
-        <color attach="background" args={[palette.fog]} />
-        <fog attach="fog" args={[palette.fog, 12, 24]} />
-        <Network colorA={palette.a} colorB={palette.b} />
-        <FloatingShape position={[-5.5, 1.6, -2]} color={palette.b} speed={0.35} scale={1.5} />
-        <FloatingShape position={[5.2, -1.8, -1]} color={palette.a} speed={0.28} scale={1.1} />
-        <FloatingShape position={[3.4, 2.4, -4]} color={palette.a} speed={0.2} scale={0.8} />
-      </Canvas>
-      <div className="pointer-events-none absolute inset-0 bg-background/55" />
->>>>>>> 88d3f5c648715706e0bc2b78dc2e61cbfd9402e4
     </div>
   );
 }

@@ -1,11 +1,6 @@
 import { Link } from "@tanstack/react-router";
-<<<<<<< HEAD
 import { useEffect, useState } from "react";
 import { computeTimerElapsed, useStore } from "@/lib/store";
-=======
-import { useState } from "react";
-import { useStore } from "@/lib/store";
->>>>>>> 88d3f5c648715706e0bc2b78dc2e61cbfd9402e4
 
 const LINKS = [
   { to: "/", label: "Dashboard" },
@@ -18,7 +13,6 @@ const LINKS = [
 export function Nav() {
   const { state, update } = useStore();
   const [open, setOpen] = useState(false);
-<<<<<<< HEAD
   const [, setNavTick] = useState(0);
 
   const isTimerRunning = !!state.timer?.isRunning;
@@ -41,11 +35,6 @@ export function Nav() {
       ? `${String(navHh).padStart(2, "0")}:${String(navMm).padStart(2, "0")}:${String(navSs).padStart(2, "0")}`
       : `${String(navMm).padStart(2, "0")}:${String(navSs).padStart(2, "0")}`;
 
-=======
-
-  const toggleTheme = () => update((s) => ({ ...s, theme: s.theme === "dark" ? "light" : "dark" }));
-
->>>>>>> 88d3f5c648715706e0bc2b78dc2e61cbfd9402e4
   return (
     <header className="sticky top-0 z-40 border-b border-border bg-background/70 backdrop-blur-xl">
       <div className="mx-auto flex max-w-6xl items-center justify-between gap-4 px-4 py-3">
@@ -68,7 +57,6 @@ export function Nav() {
         </nav>
 
         <div className="flex items-center gap-2">
-<<<<<<< HEAD
           {/* Active Live Study Timer Widget */}
           {state.timer && (isTimerRunning || (state.timer.baseSeconds ?? 0) > 0) ? (
             <Link
@@ -89,8 +77,6 @@ export function Nav() {
             </Link>
           ) : null}
 
-=======
->>>>>>> 88d3f5c648715706e0bc2b78dc2e61cbfd9402e4
           <span className="hidden rounded-full border border-border px-3 py-1 text-xs text-muted-foreground sm:inline">
             {state.points} pts
           </span>

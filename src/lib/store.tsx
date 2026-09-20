@@ -23,7 +23,6 @@ export type PlanSettings = {
   startDate: string; // YYYY-MM-DD
 };
 
-<<<<<<< HEAD
 export type ActiveTimer = {
   isRunning: boolean;
   startedAt: number | null; // Wall-clock timestamp (Date.now()) when timer started/resumed
@@ -31,8 +30,6 @@ export type ActiveTimer = {
   lastCommittedMinutes: number; // Whole minutes already logged to daily sessions
 };
 
-=======
->>>>>>> 88d3f5c648715706e0bc2b78dc2e61cbfd9402e4
 export type AppState = {
   completed: string[];
   sessions: Record<string, number>; // date -> minutes studied
@@ -41,11 +38,8 @@ export type AppState = {
   plan: PlanSettings | null;
   projects: ProjectEntry[];
   theme: "dark" | "light";
-<<<<<<< HEAD
   dailyGoalMinutes?: number; // custom daily study target in minutes (e.g. 120 = 2h)
   timer?: ActiveTimer;
-=======
->>>>>>> 88d3f5c648715706e0bc2b78dc2e61cbfd9402e4
 };
 
 const DEFAULT_STATE: AppState = {
@@ -56,7 +50,6 @@ const DEFAULT_STATE: AppState = {
   plan: null,
   projects: [],
   theme: "dark",
-<<<<<<< HEAD
   dailyGoalMinutes: 120, // default 2 hours
   timer: {
     isRunning: false,
@@ -64,8 +57,6 @@ const DEFAULT_STATE: AppState = {
     baseSeconds: 0,
     lastCommittedMinutes: 0,
   },
-=======
->>>>>>> 88d3f5c648715706e0bc2b78dc2e61cbfd9402e4
 };
 
 const KEY = "ml-mastery-state-v1";
@@ -84,7 +75,6 @@ export function todayKey(d = new Date()) {
   ).padStart(2, "0")}`;
 }
 
-<<<<<<< HEAD
 export function computeTimerElapsed(timer?: ActiveTimer): number {
   if (!timer) return 0;
   const base = Math.max(0, timer.baseSeconds || 0);
@@ -105,8 +95,6 @@ export function awardBadges(minutesToday: number, streak: number, current: strin
   return [...badges];
 }
 
-=======
->>>>>>> 88d3f5c648715706e0bc2b78dc2e61cbfd9402e4
 export function StoreProvider({ children }: { children: ReactNode }) {
   const [state, setState] = useState<AppState>(DEFAULT_STATE);
   const [ready, setReady] = useState(false);
@@ -114,7 +102,6 @@ export function StoreProvider({ children }: { children: ReactNode }) {
   useEffect(() => {
     try {
       const raw = localStorage.getItem(KEY);
-<<<<<<< HEAD
       if (raw) {
         const parsed = JSON.parse(raw) as Partial<AppState>;
         setState({
@@ -126,9 +113,6 @@ export function StoreProvider({ children }: { children: ReactNode }) {
           },
         });
       }
-=======
-      if (raw) setState({ ...DEFAULT_STATE, ...(JSON.parse(raw) as AppState) });
->>>>>>> 88d3f5c648715706e0bc2b78dc2e61cbfd9402e4
     } catch {
       /* ignore corrupt storage */
     }
@@ -142,7 +126,6 @@ export function StoreProvider({ children }: { children: ReactNode }) {
     root.classList.toggle("light", state.theme === "light");
   }, [state, ready]);
 
-<<<<<<< HEAD
   // Background and sleep-recovery synchronizer
   // Ensures all study time is credited accurately across tab switches and system sleep
   useEffect(() => {
@@ -200,8 +183,6 @@ export function StoreProvider({ children }: { children: ReactNode }) {
     };
   }, [ready]);
 
-=======
->>>>>>> 88d3f5c648715706e0bc2b78dc2e61cbfd9402e4
   const update = useCallback((fn: (s: AppState) => AppState) => {
     setState((prev) => fn(prev));
   }, []);
@@ -249,7 +230,6 @@ export function streakDays(sessions: Record<string, number>) {
 export function totalMinutes(sessions: Record<string, number>) {
   return Object.values(sessions).reduce((a, b) => a + b, 0);
 }
-<<<<<<< HEAD
 
 export function getEffectiveDailyGoalMinutes(state: AppState): number {
   if (state.dailyGoalMinutes && state.dailyGoalMinutes > 0) {
@@ -289,5 +269,3 @@ export function formatHoursAndMins(minutes: number): string {
   return `${h}h ${m}m`;
 }
 
-=======
->>>>>>> 88d3f5c648715706e0bc2b78dc2e61cbfd9402e4
