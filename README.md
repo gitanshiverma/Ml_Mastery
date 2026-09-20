@@ -2,7 +2,7 @@
 
 A modern, interactive 3D learning platform designed to help developers and data enthusiasts master Machine Learning through structured curriculum, adaptive study planning, time tracking, and hands-on projects.
 
-![ML Mastery]![Uploading image.png…]()
+[ML Mastery]![Uploading image.png…]()
 
 
 ---
@@ -61,11 +61,6 @@ Run the Vite dev server with hot module replacement:
 ```bash
 npm run dev
 ```
-
-Open [http://localhost:8080/](http://localhost:8080/
-
-### Type Check & Code Quality
-
 Run TypeScript compilation check:
 
 ```bash
@@ -97,7 +92,7 @@ npm run preview
 
 ## 🌐 Deployment
 
-## deployment  link:  https://ml-mastery-bg7ql6bgq-error-422.vercel.app/tracker
+## deployment  link:https://ml-mastery-bg7ql6bgq-error-422.vercel.app/
 
 The project uses **Nitro** server engine, enabling easy deployment to multiple providers:
 
