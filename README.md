@@ -2,7 +2,8 @@
 
 A modern, interactive 3D learning platform designed to help developers and data enthusiasts master Machine Learning through structured curriculum, adaptive study planning, time tracking, and hands-on projects.
 
-![ML Mastery](public/robots.txt)
+![ML Mastery]![Uploading image.png…]()
+
 
 ---
 
