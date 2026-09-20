@@ -97,7 +97,7 @@ npm run preview
 
 ## 🌐 Deployment
 
-## deployment  link:https://ml-mastery-9edu.vercel.app/
+## deployment  link:  https://ml-mastery-bg7ql6bgq-error-422.vercel.app/tracker
 
 The project uses **Nitro** server engine, enabling easy deployment to multiple providers:
 
