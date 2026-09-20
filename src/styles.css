@@ -38,6 +38,7 @@
 
 :root {
   --radius: 0.9rem;
+<<<<<<< HEAD
   --background: oklch(0.06 0 0);
   --foreground: oklch(0.96 0 0);
   --card: oklch(0.11 0 0 / 75%);
@@ -54,11 +55,33 @@
   --destructive-foreground: oklch(0.98 0 0);
   --border: oklch(0.98 0 0 / 10%);
   --input: oklch(0.98 0 0 / 14%);
+=======
+  --background: oklch(0.16 0.03 260);
+  --foreground: oklch(0.96 0.01 250);
+  --card: oklch(0.21 0.035 262 / 72%);
+  --card-foreground: oklch(0.96 0.01 250);
+  --primary: oklch(0.83 0.19 175);
+  --primary-foreground: oklch(0.18 0.04 200);
+  --secondary: oklch(0.28 0.05 265);
+  --secondary-foreground: oklch(0.95 0.01 250);
+  --muted: oklch(0.25 0.04 264);
+  --muted-foreground: oklch(0.72 0.03 258);
+  --accent: oklch(0.72 0.19 320);
+  --accent-foreground: oklch(0.16 0.03 260);
+  --destructive: oklch(0.64 0.21 22);
+  --destructive-foreground: oklch(0.98 0.01 250);
+  --border: oklch(0.98 0.02 250 / 12%);
+  --input: oklch(0.98 0.02 250 / 16%);
+>>>>>>> 88d3f5c648715706e0bc2b78dc2e61cbfd9402e4
   --ring: oklch(0.83 0.19 175);
   --glow: 0 0 0 1px oklch(0.83 0.19 175 / 25%), 0 18px 50px -20px oklch(0.83 0.19 175 / 45%);
   --scene-a: #22e3c0;
   --scene-b: #b25cff;
+<<<<<<< HEAD
   --scene-bg: #000000;
+=======
+  --scene-bg: #0a0f1c;
+>>>>>>> 88d3f5c648715706e0bc2b78dc2e61cbfd9402e4
 }
 
 .light {
@@ -136,6 +159,7 @@
   }
 }
 
+<<<<<<< HEAD
 @keyframes goal-pulse-glow {
   0%, 100% {
     box-shadow: 0 0 15px oklch(0.83 0.19 175 / 35%), 0 0 35px oklch(0.72 0.19 320 / 25%);
@@ -225,6 +249,8 @@
   font-weight: 700;
 }
 
+=======
+>>>>>>> 88d3f5c648715706e0bc2b78dc2e61cbfd9402e4
 @utility confetti-piece {
   position: fixed;
   top: 0;
@@ -235,6 +261,7 @@
   pointer-events: none;
   z-index: 60;
 }
+<<<<<<< HEAD
 
 @keyframes film-flicker {
   0%, 100% { opacity: 0.04; transform: translate(0, 0); }
@@ -265,3 +292,5 @@
 
 
 
+=======
+>>>>>>> 88d3f5c648715706e0bc2b78dc2e61cbfd9402e4
